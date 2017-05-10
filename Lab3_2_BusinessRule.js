@@ -6,7 +6,7 @@
 		r.setStringParameter('title', 'New Priority ' + current.priority + ' Incident has been created');
 		r.setStringParameter('short_description', current.short_description);
 		r.setStringParameter('requested_by', current.caller_id.name);
-		r.setStringParameter('url', 'https://' + gs.getProperty('instance_name') + '.service-now.com/nav_to.do?uri=incident.do?sysparm_query=number=' + current.number);
+		r.setStringParameter('url', 'https://' + gs.getProperty('instance_name') + '.lab.service-now.com/nav_to.do?uri=incident.do?sysparm_query=number=' + current.number);
 		var response = r.execute();
 		var responseBody = response.getBody();
 		var httpStatus = response.getStatusCode();
